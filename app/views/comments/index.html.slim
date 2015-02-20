@@ -1,0 +1,31 @@
+h1 Listing comments
+
+table
+  thead
+    tr
+      th Author
+      th Avatar
+      th Body
+      th Post
+      th Post
+      th Answers
+      th
+      th
+      th
+
+  tbody
+    - @comments.each do |comment|
+      tr
+        td = comment.author
+        td = comment.avatar
+        td = comment.body
+        td = comment.post
+        td = comment.post
+        td = comment.answers
+        td = link_to 'Show', comment
+        td = link_to 'Edit', edit_comment_path(comment)
+        td = link_to 'Destroy', comment, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Comment', new_comment_path
