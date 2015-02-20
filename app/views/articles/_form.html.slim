@@ -1,9 +1,9 @@
-= form_for @article do |f|
-  - if @article.errors.any?
+= form_for resource do |f|
+  - if resource.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+      h2 = "#{pluralize(resource.errors.count, "error")} prohibited this article from being saved:"
       ul
-        - @article.errors.full_messages.each do |message|
+        - resource.errors.full_messages.each do |message|
           li = message
 
   .field
@@ -18,4 +18,8 @@
   .field
     = f.label :body
     = f.text_field :body
-  .actions = f.submit
+  .field
+    = f.label :categories
+    = f.select :categories, Category.all.map{|c| [c.name, c.id]}, {include_blank: "None"},  multiple: true
+  .actions
+    = f.submit
