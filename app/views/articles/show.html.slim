@@ -2,16 +2,16 @@ p#notice = notice
 
 p
   strong Title:
-  = @article.title
+  = resource.title
 p
   strong Tags:
-  = @article.tags
+  = resource.tags
 p
   strong Image:
-  = @article.image
+  = resource.image
 p
   strong Body:
-  = @article.body
+  = resource.body
 
 = link_to 'Edit', edit_article_path(@article)
 '|

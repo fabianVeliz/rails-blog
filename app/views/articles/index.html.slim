@@ -12,7 +12,7 @@ table
       th
 
   tbody
-    - @articles.each do |article|
+    - collection.each do |article|
       tr
         td = article.title
         td = article.tags
