@@ -1,4 +1,5 @@
 class Admin::CommentsController < InheritedResources::Base
+  before_action :authenticate_admin!
 
   private
 

@@ -1,4 +1,5 @@
 class Admin::ArticlesController < InheritedResources::Base
+  before_action :authenticate_admin!
 
   def create
     @article = Article.new(article_params)
