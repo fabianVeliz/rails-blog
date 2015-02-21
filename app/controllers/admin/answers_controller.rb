@@ -1,4 +1,4 @@
-class AnswersController < InheritedResources::Base
+class Admin::AnswersController < InheritedResources::Base
 
   private
 

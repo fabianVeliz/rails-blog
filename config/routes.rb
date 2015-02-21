@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
 
-  resources :categories
+  resources :blogs, only: [:index, :show]
 
-  resources :answers
+  namespace :admin do
 
-  resources :comments
+    get "/", to: "categories#index"
 
-  resources :articles
+    resources :categories
+
+    resources :answers
+
+    resources :comments
+
+    resources :articles
+  end
 
   root 'welcome#index'
 

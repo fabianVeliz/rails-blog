@@ -1,4 +1,4 @@
-class CategoriesController < InheritedResources::Base
+class Admin::CategoriesController < InheritedResources::Base
 
   private
 

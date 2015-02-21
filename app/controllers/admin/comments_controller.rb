@@ -1,4 +1,4 @@
-class CommentsController < InheritedResources::Base
+class Admin::CommentsController < InheritedResources::Base
 
   private
 

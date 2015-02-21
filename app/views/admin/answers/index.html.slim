@@ -1,0 +1,27 @@
+h1 Listing answers
+
+table
+  thead
+    tr
+      th Author
+      th Avatar
+      th Body
+      th Comment
+      th
+      th
+      th
+
+  tbody
+    - collection.each do |answer|
+      tr
+        td = answer.author
+        td = answer.avatar
+        td = answer.body
+        td = answer.comment
+        td = link_to 'Show', admin_answer_path(answer)
+        td = link_to 'Edit', edit_admin_answer_path(answer)
+        td = link_to 'Destroy', admin_answer_path(answer), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Answer', new_admin_answer_path

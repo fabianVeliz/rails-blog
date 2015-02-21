@@ -7,7 +7,6 @@ table
       th Avatar
       th Body
       th Post
-      th Post
       th Answers
       th
       th
@@ -20,12 +19,11 @@ table
         td = comment.avatar
         td = comment.body
         td = comment.post
-        td = comment.post
         td = comment.answers
-        td = link_to 'Show', comment
-        td = link_to 'Edit', edit_comment_path(comment)
-        td = link_to 'Destroy', comment, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Show', admin_comment_path(comment)
+        td = link_to 'Edit', edit_admin_comment_path(comment)
+        td = link_to 'Destroy', admin_comment_path(comment), data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Comment', new_comment_path
+= link_to 'New Comment', new_admin_comment_path

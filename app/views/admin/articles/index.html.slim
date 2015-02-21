@@ -18,10 +18,10 @@ table
         td = article.tags
         td = article.image
         td = article.body
-        td = link_to 'Show', article
-        td = link_to 'Edit', edit_article_path(article)
-        td = link_to 'Destroy', article, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Show', admin_article_path(article)
+        td = link_to 'Edit', edit_admin_article_path(article)
+        td = link_to 'Destroy', admin_article_path(article), data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Article', new_article_path
+= link_to 'New Article', new_admin_article_path
