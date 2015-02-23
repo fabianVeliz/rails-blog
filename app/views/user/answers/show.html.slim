@@ -1,0 +1,13 @@
+p
+  strong Author:
+  = resource.author
+p
+  strong Avatar:
+  = resource.avatar
+p
+  strong Body:
+  = resource.body
+
+= link_to 'Edit', edit_admin_article_comment_answer_path(@article, @comment, resource)
+'|
+= link_to 'Back', admin_article_comment_answers_path

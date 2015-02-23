@@ -1,0 +1,19 @@
+p
+  strong Author:
+  = resource.author
+p
+  strong Avatar:
+  = resource.avatar
+p
+  strong Body:
+  = resource.body
+p
+  - if resource.answers
+    strong Answers:
+    = resource.answers
+  - else
+    p No answers
+
+= link_to 'Edit', edit_admin_article_comment_path(resource.article_id, resource)
+'|
+= link_to 'Back', admin_article_comments_path
