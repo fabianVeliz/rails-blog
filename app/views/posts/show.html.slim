@@ -1,0 +1,20 @@
+p
+  strong Title:
+  = article.title
+p
+  strong Tags:
+  = article.tags
+p
+  strong Image:
+  = article.image
+p
+  strong Body:
+  = article.body
+
+br
+h4 you can logged to comment
+.btn
+  = link_to 'Sign In', new_user_session_path
+
+br
+= link_to 'Back', posts_path

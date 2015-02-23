@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
+  devise_for :users
 
-  resources :blogs, only: [:index, :show]
+  devise_for :admins
 
   namespace :admin do
 
@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'welcome#index'
+  resources :posts, only: [:index, :show]
+
+  root 'posts#index'
 
 end

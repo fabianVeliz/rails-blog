@@ -1,0 +1,9 @@
+h1 Welcome to Blog
+
+h2 Listing articles
+
+- for article in articles
+  br
+  = article.title
+  br
+  = link_to "View", post_path(article.id)
