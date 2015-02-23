@@ -4,7 +4,7 @@ class CreateArticlesCategories < ActiveRecord::Migration
       t.references :article, index: true
       t.references :category, index: true
     end
-    add_foreign_key :articles_categories, :article
-    add_foreign_key :articles_categories, :category
+    add_foreign_key :articles_categories, :articles
+    add_foreign_key :articles_categories, :categories
   end
 end
