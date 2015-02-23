@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Title:
+  = resource.title
+p
+  strong Tags:
+  = resource.tags
+p
+  strong Image:
+  = resource.image
+p
+  strong Body:
+  = resource.body
+
+= link_to 'Edit', edit_admin_article_path(resource)
+'|
+= link_to 'Back', admin_articles_path

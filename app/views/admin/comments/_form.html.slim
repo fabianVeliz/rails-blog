@@ -1,0 +1,24 @@
+= form_for [:admin, resource] do |f|
+  - if resource.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(resource.errors.count, "error")} prohibited this comment from being saved:"
+      ul
+        - resource.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :author
+    = f.text_field :author
+  .field
+    = f.label :avatar
+    = f.text_field :avatar
+  .field
+    = f.label :body
+    = f.text_field :body
+  .field
+    = f.label :article_id
+    = f.text_field :article_id
+  / .field
+  /  = f.label :answers
+  /  = f.text_field :answers
+  .actions = f.submit

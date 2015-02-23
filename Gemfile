@@ -8,6 +8,9 @@ gem 'rails', '4.2.0'
 # Setup
 gem 'figaro'
 
+# Authentication
+gem 'devise'
+
 # Plugins
 gem 'decent_exposure'
 gem 'inherited_resources', '~> 1.6.0'

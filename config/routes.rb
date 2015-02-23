@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
 
-  resources :categories
+  devise_for :admins
 
-  resources :answers
+  resources :blogs, only: [:index, :show]
 
-  resources :comments
+  namespace :admin do
 
-  resources :articles
+    get "/", to: "categories#index"
+
+    resources :categories
+
+    resources :answers
+
+    resources :comments
+
+    resources :articles
+  end
 
   root 'welcome#index'
 
