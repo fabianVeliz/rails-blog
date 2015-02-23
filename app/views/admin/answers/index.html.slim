@@ -18,10 +18,10 @@ table
         td = answer.avatar
         td = answer.body
         td = answer.comment
-        td = link_to 'Show', admin_answer_path(answer)
-        td = link_to 'Edit', edit_admin_answer_path(answer)
-        td = link_to 'Destroy', admin_answer_path(answer), data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Show', admin_article_comment_answer_path(@article, @comment, answer)
+        td = link_to 'Edit', edit_admin_article_comment_answer_path(@article, @comment, answer)
+        td = link_to 'Destroy', admin_article_comment_answer_path(@article, @comment, answer), data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Answer', new_admin_answer_path
+= link_to 'New Answer', new_admin_article_comment_answer_path

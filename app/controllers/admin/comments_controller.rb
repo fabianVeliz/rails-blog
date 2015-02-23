@@ -1,6 +1,8 @@
 class Admin::CommentsController < InheritedResources::Base
   before_action :authenticate_admin!
 
+  belongs_to :article
+
   private
 
     def comment_params

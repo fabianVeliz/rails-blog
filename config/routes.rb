@@ -10,11 +10,11 @@ Rails.application.routes.draw do
 
     resources :categories
 
-    resources :answers
-
-    resources :comments
-
-    resources :articles
+    resources :articles do
+      resources :comments do
+        resources :answers
+      end
+    end
   end
 
   root 'welcome#index'

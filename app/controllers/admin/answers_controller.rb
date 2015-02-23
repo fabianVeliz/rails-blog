@@ -1,6 +1,8 @@
 class Admin::AnswersController < InheritedResources::Base
   before_action :authenticate_admin!
 
+  belongs_to :article, :comment
+
   private
 
     def answer_params
