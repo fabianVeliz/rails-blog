@@ -4,7 +4,7 @@ class Admin::CommentsController < InheritedResources::Base
   private
 
     def comment_params
-      params.require(:comment).permit(:author, :avatar, :body, :post, :post_id, :answers)
+      params.require(:comment).permit(:author, :avatar, :body, :post, :article_id, :answers)
     end
 end
 

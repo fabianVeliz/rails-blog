@@ -6,7 +6,7 @@ table
       th Author
       th Avatar
       th Body
-      th Post
+      th Article
       th Answers
       th
       th
@@ -18,7 +18,7 @@ table
         td = comment.author
         td = comment.avatar
         td = comment.body
-        td = comment.post
+        td = comment.article
         td = comment.answers
         td = link_to 'Show', admin_comment_path(comment)
         td = link_to 'Edit', edit_admin_comment_path(comment)
