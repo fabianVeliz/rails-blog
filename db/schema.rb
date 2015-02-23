@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221074729) do
+ActiveRecord::Schema.define(version: 20150223135943) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -69,12 +69,11 @@ ActiveRecord::Schema.define(version: 20150221074729) do
     t.string   "author"
     t.string   "avatar"
     t.string   "body"
-    t.string   "post"
-    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "article_id"
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
 end
