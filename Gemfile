@@ -23,6 +23,11 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'uglifier', '>= 1.3.0'
 
+# Production
+group :production do
+  gem 'pg'
+end
+
 # Development
 group :development do
   gem 'sqlite3'
