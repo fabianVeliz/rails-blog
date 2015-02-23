@@ -1,0 +1,44 @@
+//Libs
+@import 'bourbon';
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+a {
+  text-decoration: none;
+}
+
+header{
+  @include clearfix();
+  background-color: #4CAF50;
+  padding: 10px;
+
+  .logo {
+    float: left;
+
+    a{
+      color: #fff;
+    }
+
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 10px;
+
+      a {
+        color: #fff;
+      }
+
+    }
+
+  }
+
+}

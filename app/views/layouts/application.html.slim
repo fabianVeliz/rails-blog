@@ -6,10 +6,20 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
+    .container-page
+      header
+        .logo
+          = link_to 'FBlog', root_path
+        ul
+          li
+            = link_to 'Sign In', new_user_session_path
+          li
+            = link_to 'Sign Up', new_user_registration_path
 
-    = yield
+      p.notice
+        = notice
+      p.alert
+        = alert
+
+      = yield
 
